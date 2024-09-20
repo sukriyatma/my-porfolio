@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #EBEBEB;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -24,4 +24,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ff-poppins {
+  font-family: var(--font-poppins);
+}
+
+.ff-anonympro {
+  font-family: var(--font-anonympro);
 }

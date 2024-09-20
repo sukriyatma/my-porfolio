@@ -1,101 +1,90 @@
-import Image from "next/image";
+import ExperienceItem from "@/components/experienceItem";
+import ProjectItem from "@/components/projectItem";
+import Experience from "@/data/experience";
+import Projects from "@/data/projects";
+import LinkIcon from "@/icons/LinkIcon";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className="flex w-full p-[3.125rem_6.25rem] flex-col justify-center items-center gap-[6.25rem]">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+        <div className="flex flex-wrap items-start gap-[6.25rem]">
+        {/* Up */}
+          
+          <div className="flex w-[26rem] flex-col items-start gap-[1.875rem]">
+            {/* Profile Card*/}
+            <div className="relative h-[12.5rem] w-[12.5rem] rounded-[1.25rem]  overflow-hidden">
+              <img src="/img/sukriyatma.jpg" alt="sukriyatma" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="flex flex-col items-start gap-[0.625rem] self-stretch">
+              <p className="ff-anonympro text-t_primary text-[2rem]">I’m Muhammad Sukriyatma</p>
+              <p className="ff-poppins text-t_primary text-[0.9375rem]">Software Engineering Technology Student at <br/> IPB University</p>
+            </div>
+          </div>
+
+          <div className="flex w-[36.0625rem] p-[0.625rem] flex-col items-start gap-[1.875rem]">
+          {/* About me, Experience and Projects */}
+
+            <div className="flex flex-col items-start self-stretch gap-[3.375rem]">
+              {/* About me */}
+              <p className="ff-anonympro text-t_primary text-[2rem]">I am just very good at all</p>
+              <div className="flex justify-center items-center gap-[0.625rem] rounded-[0.3125rem] border-2 outline-[#B5B5B5] p-[0.625rem]">
+                  <p className="ff-poppins text-t_primary font-medium text-[0.9375rem]">Reach me out:</p>
+                  <a href="https://www.instagram.com/sukriyatma/">
+                    <img src="/img/instagram_icon.png" alt="instagram" className="w-[1.875rem]" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/sukriyatma/">
+                    <img src="/img/linkedin_icon.png" alt="linkedin" className="w-[1.875rem]" />
+                  </a>
+                  <a href="https://github.com/sukriyatma">
+                    <img src="/img/github_icon.png" alt="github" className="w-[1.875rem]" />
+                  </a>
+              </div>
+            </div>
+
+            <div className="flex p-[0.625rem_0rem] flex-col justify-center items-start gap-[0.625rem] self-stretch border-t-2 outline-[#B3B3B3]">
+              {/* Experience */}
+              <p className="ff-anonympro text-t_primary text-[1.5rem]">Professional Experience</p>
+
+                {
+                  Experience.map(exp => (
+                    <ExperienceItem
+                      key={exp.companyName}
+                      position={exp.position}
+                      companyName={exp.companyName}
+                      companyImage={exp.companyImage}
+                      periode={exp.periode}
+                    />
+                  ))
+                }
+              
+            </div>
+
+            <div className="flex p-[0.625rem_0rem] flex-col justify-center items-start gap-[0.625rem] self-stretch border-t-2 outline-[#B3B3B3]">
+              {/* Projects */}
+              <p className="ff-anonympro text-t_primary text-[1.5rem]">Projects</p>
+              
+              {
+                Projects.map(project => (
+                  <ProjectItem 
+                    key={project.projectName}
+                    projectImage={project.projectImage}
+                    projectLink={project.projectLink}
+                    projectName={project.projectName}
+                    periode={project.periode}
+                  />
+                ))
+              }
+              
+            </div>
+
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      </div>
+    </>
   );
 }
