@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export interface SocialMediaItemProps {
     link: string;
     img: string;
@@ -5,9 +7,9 @@ export interface SocialMediaItemProps {
 }
 
 const SocialMediaItem: React.FC<SocialMediaItemProps> = (props: SocialMediaItemProps) => (
-    <div>
-        <a href={props.link}>
-            <img src={props.img} alt={props.name} className="w-[1.875rem]" />
+    <div className="w-[1.875rem]">
+        <a href={props.link} target="_blank" >
+            <img src={props.img} alt={props.name} />
         </a>
     </div>
 );

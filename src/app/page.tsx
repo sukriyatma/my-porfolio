@@ -17,14 +17,14 @@ export default function Home() {
         <div className="w-full flex flex-wrap lg:flex-row items-start gap-[6.25rem] justify-center">
           {/* Up */}
           
-          <div className="flex min-w-[30rem] flex-col items-start gap-[1.875rem] px-[3rem]">
+          <div className="flex w-full lg:w-[30rem] flex-col items-start gap-[1.875rem]">
             {/* Profile Card*/}
             <div className="relative h-[12.5rem] w-[12.5rem] rounded-[1.25rem]  overflow-hidden">
               <img src="/img/sukriyatma.jpg" alt="sukriyatma" className="w-full h-full object-cover object-top" />
             </div>
             <div className="flex flex-col items-start gap-[0.625rem] self-stretch">
               <p className="ff-anonympro text-t_primary text-[2rem]">I’m Muhammad Sukriyatma</p>
-              <p className="ff-poppins text-t_primary text-[0.9375rem]">Software Engineering Technology Student at <br/> IPB University</p>
+              <p className="ff-poppins text-t_primary text-[0.9375rem]">Software Engineering Technology Student at IPB University</p>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="w-full flex p-[0.625rem] flex-col items-start gap-[1.875rem] border-t border-t_ter">
           <p className="ff-anonympro text-t_primary text-[1.5rem] self-end">Frequently Used Tech Tools</p>
           <div className="flex flex-col items-center gap-[1.25rem] self-stretch">
-              <div className="flex items-center gap-[1rem] lg:gap-[1.25rem]">
+              <div className="flex items-center gap-[0.3rem] lg:gap-[1.25rem]">
                 {/* Languages */}
                 {
                   Languages.map(lang =>                 
