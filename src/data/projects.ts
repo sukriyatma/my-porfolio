@@ -8,18 +8,18 @@ const Projects = [
     },
     {
         projectImage: "/img/energis.png",
-        projectLink: "https://github.com/sukriyatma",
+        projectLink: "https://github.com/sukriyatma/EnerGIS",
         projectName: "EnerGIS",
         periode: "Aug 2023 - Nov 2023"
     },
     {
-        projectImage: "",
-        projectLink: "https://github.com/sukriyatma",
+        projectImage: "/img/treecare_icon.png",
+        projectLink: "",
         projectName: "TreeCare",
         periode: "Nov 2023 - Dec 2023"
     },
     {
-        projectImage: "",
+        projectImage: "/img/gap_icon.png",
         projectLink: "https://gaportal.yatma.me",
         projectName: "GT Auto Portal",
         periode: "Sep 2024 - Present"
