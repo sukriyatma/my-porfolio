@@ -31,9 +31,9 @@ export default function Home() {
           <div className="flex w-[36.0625rem] p-[0.625rem] flex-col items-start gap-[1.875rem]">
             {/* About me, Experience and Projects */}
 
-            <div className="flex flex-col items-start self-stretch gap-[3.375rem]">
+            <div className="flex flex-col items-start self-stretch gap-[1.25rem]">
               {/* About me */}
-              <p className="ff-anonympro text-t_primary text-[2rem]">I am just very good at all</p>
+              <p className="ff-anonympro text-t_primary text-[2rem]">Passionate about creating innovative digital solutions for a high-impact society.</p>
               <div className="flex justify-center items-center gap-[0.625rem] rounded-[0.3125rem] border border-t_ter p-[0.625rem]">
                   <p className="ff-poppins text-t_primary font-medium text-[0.9375rem]">Reach me out:</p>
                   {
