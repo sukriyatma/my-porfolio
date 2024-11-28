@@ -1,9 +1,15 @@
 const Experience = [
     {
-        position:"Software Engineer Intern",
+        position:"Backend Developer Intern",
         companyName:"Bank Neo Commerce",
         companyImage:"/img/neobank_icon.png",
-        periode:"Feb 2024 - Present"
+        periode:"Feb - Oct 2024"
+    },
+    {
+        position:"Software Engineer Intern",
+        companyName:"Blibli.com",
+        companyImage:"/img/blibli_icon.png",
+        periode:"Oct 2024 - Present"
     }
 ]
 
