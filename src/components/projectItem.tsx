@@ -12,7 +12,7 @@ interface ProjectItemProps {
 const ProjectItem: React.FC<ProjectItemProps> = (props: ProjectItemProps) => (
     <div className="flex p-[0.9375rem] justify-between items-center self-stretch rounded-[1.875rem] border outline-[#f3f3f3] bg-[#fff]">
         <div className="flex items-center gap-[0.9375rem]">
-            <div className="w-[3.125rem] h-[3.125rem] content-center">
+            <div className="w-[3.125rem] h-[3.125rem] flex justify-center items-center">
                 {
                     props.projectImage? 
                     <img src={props.projectImage} alt={props.projectName}/>

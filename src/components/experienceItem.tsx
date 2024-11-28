@@ -11,8 +11,8 @@ const ExperienceItem: React.FC<ExperienceItemProps> = (props: ExperienceItemProp
     return (
         <div className="flex p-[0.9375rem] justify-between items-center self-stretch rounded-[1.875rem] border outline-[#f3f3f3] bg-[#fff]">
             <div className="flex items-center gap-[0.9375rem]">
-                <div className="w-[3.125rem] h-[3.125rem]">
-                    <img src={props.companyImage} alt="neobank" className="rounded-md"/>
+                <div className="w-[3.125rem] h-[3.125rem] flex justify-center items-center">
+                    <img src={props.companyImage} alt="neobank" className="rounded"/>
                 </div>
                 <div className="flex flex-col items-start">
                     <p className="ff_poppins text-t_primary text_base">{props.position}</p>
