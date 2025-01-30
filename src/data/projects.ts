@@ -20,7 +20,7 @@ const Projects = [
     },
     {
         projectImage: "/img/gap_icon.png",
-        projectLink: "https://gaportal.yatma.me",
+        projectLink: "https://github.com/sukriyatma/gt-auto-portal",
         projectName: "GT Auto Portal",
         periode: "Sep 2024 - Present"
     },
